@@ -1,0 +1,8 @@
+{
+  "nodeVersion" : "system",
+  "baseUrl": "http://localhost:3000",
+  "component": {
+    "componentFolder": "src/__tests__",
+    "testFiles": "*.spec.{ts,tsx}"
+  }
+}
