@@ -26,6 +26,6 @@ module.exports = {
       propFilter: (prop) => (prop.parent ? !/node_modules/.test(prop.parent.fileName) : true),
     },
   },
-  stories: ['../src/component/**/*.spec.tsx'],
+  stories: ['../src/component/**/*.stories.tsx', '../src/shared/**/*.stories.{tsx,mdx}'],
   addons: ['@storybook/addon-links', '@storybook/addon-essentials', '@storybook/addon-docs'],
 };

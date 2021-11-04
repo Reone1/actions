@@ -1,7 +1,5 @@
 import { Box, ThemeProvider } from '@mui/material';
-import { createTheme } from '@mui/material/styles';
-
-const theme = createTheme({});
+import { theme } from '../src/shared/styles';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
