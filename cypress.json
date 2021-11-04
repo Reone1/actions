@@ -1,6 +1,7 @@
 {
   "nodeVersion" : "system",
   "baseUrl": "http://localhost:3000",
+  "projectId": "3uqd3x",
   "component": {
     "componentFolder": "src/__tests__",
     "testFiles": "*.spec.{ts,tsx}"
