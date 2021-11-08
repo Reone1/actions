@@ -3,7 +3,7 @@ import { Story, Meta } from '@storybook/react';
 import TextInput, { TextInputProps } from './index';
 
 export default {
-  title: 'Design system/Input/TextInput',
+  title: 'Design system/atoms/TextInput',
   component: TextInput,
   table: {
     defaultValue: {
