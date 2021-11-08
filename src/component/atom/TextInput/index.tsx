@@ -33,16 +33,16 @@ const TextInput = ({
   error,
   ...rest
 }: TextInputProps) => {
-  const isError = useMemo(() => Boolean(error), [error]);
+  useMemo(() => Boolean(error), [error]);
   return (
     <TextField
       type={type}
       label={label}
       variant={variant}
-      error={isError}
-      helperText={isError && error}
-      {...register}
+      error={Boolean(error)}
+      helperText={error}
       {...rest}
+      {...register}
     />
   );
 };
