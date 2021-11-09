@@ -1,9 +1,9 @@
-import { ReactNode, useCallback, memo, useRef } from 'react';
+import { ReactNode, useCallback, memo } from 'react';
 import { Button, Stack } from '@mui/material';
 import { Box } from '@mui/system';
 import { useTheme } from '@mui/material/styles';
 import { useForm, useWatch } from 'react-hook-form';
-import { TextInput } from '../component/atom';
+import { TextInput } from '@component/atom';
 
 type AuthFormProps = {
   id: string;
@@ -29,14 +29,16 @@ const SignUpStyle = memo(({ children }: { children: ReactNode }) => {
   );
 });
 
-const SignUpContainer = () => {
+const SignUpForm = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
     watch,
   } = useForm<AuthFormProps>();
+
   const password = useWatch;
+
   const signupSubmit = useCallback(async (data) => {
     const { id, password } = data;
     const response = await fetch('http://localhost:3000/signup', {
@@ -101,4 +103,4 @@ const SignUpContainer = () => {
   );
 };
 
-export default SignUpContainer;
+export default SignUpForm;

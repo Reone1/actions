@@ -1,9 +1,9 @@
-import SignUpContainer from '@src/container/SignUpContainer';
+import { SignUpForm } from '@component/molecules';
 import { mount, unmount } from '@cypress/react';
 
 describe('Sign up Container Test', () => {
   beforeEach(() => {
-    mount(<SignUpContainer />);
+    mount(<SignUpForm />);
   });
 
   it('Field Init', () => {

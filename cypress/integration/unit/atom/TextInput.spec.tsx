@@ -1,5 +1,6 @@
 import { mount } from '@cypress/react';
-import TextInput from '../../component/atom/TextInput/index';
+import { TextInput } from '@component/atom';
+
 describe('Textinput Test', () => {
   it('init state', () => {
     const initTestData = {
