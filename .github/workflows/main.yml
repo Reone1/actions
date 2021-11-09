@@ -12,9 +12,16 @@ jobs:
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v2
+        id: test
         with:
           record: true
+          group: merge
           build: npm run build
           start: npm start
+          tag: ${{ github.event_name }}
         env:
           CYPRESS_RECORD_KEY:  ${{ secrets.CYPRESS_RECORD_KEY }}
+          COMMIT_INFO_MESSAGE: ${{ github.event.pull_request.title }}
+      - name: Build Docker
+        if: job.steps.hello.status != failure()
+        use: MXNDEVCND/NMO-admin-client/.github/workflows/buildDocker.yml@v1
