@@ -4,6 +4,6 @@
   "projectId": "3uqd3x",
   "component": {
     "componentFolder": "src/__tests__",
-    "testFiles": "*.spec.{ts,tsx}"
+    "testFiles": "**/*.spec.{ts,tsx,js}"
   }
 }
