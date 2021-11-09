@@ -2,8 +2,10 @@
   "nodeVersion" : "system",
   "baseUrl": "http://localhost:3000",
   "projectId": "3uqd3x",
+  "integrationFolder" : "cypress/integration",
+  "testFiles": "e2e/**/*.spec.ts",
   "component": {
-    "componentFolder": "src/__tests__",
-    "testFiles": "**/*.spec.{ts,tsx,js}"
+    "componentFolder": "cypress/integration/unit",
+    "testFiles": "**/*.spec.tsx"
   }
 }

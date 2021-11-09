@@ -3,14 +3,13 @@
     "baseUrl": ".",
     "paths": {
       "@pages/*":["pages/*"],
-      "@src/*": ["src/*"],
-      "@api/*" : ["src/api/*"],
+      "@api" : ["src/api"],
       "@component/*" : ["src/component/*"],
       "@graphql/*" : ["src/graphql/*"],
       "@store/*" : ["src/store/*"],
       "@styles/*" : ["src/styles/*"],
-      "@types/*" : ["src/types/*"],
-      "@utils/*" : ["src/utils/*"]
+      "@types" : ["src/types"],
+      "@utils" : ["src/utils"]
     },
     "target": "es6",
     "lib": [
