@@ -1,13 +1,14 @@
-import { ReactNode, useCallback, memo } from 'react';
+import { ReactNode, useCallback, memo, useRef } from 'react';
 import { Button, Stack } from '@mui/material';
 import { Box } from '@mui/system';
 import { useTheme } from '@mui/material/styles';
-import { useForm } from 'react-hook-form';
+import { useForm, useWatch } from 'react-hook-form';
 import { TextInput } from '../component/atom';
 
 type AuthFormProps = {
   id: string;
   password: string;
+  passwordConfirm: string;
 };
 
 const SignUpStyle = memo(({ children }: { children: ReactNode }) => {
@@ -33,8 +34,9 @@ const SignUpContainer = () => {
     register,
     handleSubmit,
     formState: { errors },
+    watch,
   } = useForm<AuthFormProps>();
-
+  const password = useWatch;
   const signupSubmit = useCallback(async (data) => {
     const { id, password } = data;
     const response = await fetch('http://localhost:3000/signup', {
@@ -77,6 +79,18 @@ const SignUpContainer = () => {
               },
             })}
             error={errors.password?.message}
+          />
+
+          <TextInput
+            label='Password confirm'
+            data-cy='confirm'
+            type='password'
+            register={register('passwordConfirm', {
+              validate: {
+                match: (value) => value === watch('password') || 'The passwords do not match',
+              },
+            })}
+            error={errors.passwordConfirm?.message}
           />
           <Button type='submit' variant='contained'>
             Sumbit
