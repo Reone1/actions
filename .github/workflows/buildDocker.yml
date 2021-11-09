@@ -3,6 +3,9 @@ name: Build docker
 on: workflow_call
 
 jobs:
+  deploy Request:
+    if: job.steps.docker_build.status != failure()
+    uses: MXNDEVCND/NMO-admin-client/.github/workflows/deployDocker.yml@v1
   build:
     runs-on: ubuntu-latest
     steps:
@@ -27,3 +30,5 @@ jobs:
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
+
+     
