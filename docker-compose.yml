@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  devserver:
+    image: mxnjw/nmo-admin-fe:latest
+    container_name: client-dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/code
+      - /code/node_modules
+    ports:
+      - 80:3000
