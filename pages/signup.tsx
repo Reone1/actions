@@ -1,4 +1,4 @@
-import SignUpContainer from '@src/container/SignUpContainer';
+import SignUpForm from '@component/molecules/SignUpForm';
 
-const SignUpPage = () => <SignUpContainer />;
+const SignUpPage = () => <SignUpForm />;
 export default SignUpPage;
