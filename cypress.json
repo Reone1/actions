@@ -1,0 +1,13 @@
+{
+  "video": false,
+  "record": false,
+  "parallel": true,
+  "baseUrl": "http://localhost:3000",
+  "testFiles": ["**/**.spec.js", "**/**.spec.jsx"],
+  "component": {
+    "componentFolder": "components",
+    "testFiles": "**/*.spec.{ts,tsx}",
+    "viewportHeight": 500,
+    "viewportWidth": 700
+  }
+}
