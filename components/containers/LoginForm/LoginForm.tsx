@@ -58,7 +58,6 @@ const LoginForm = () => {
             error={errors.password?.message}
             register={register('password')}
           />
-
           <Button variant="contained" type="submit" data-cy="submit">
             Submit
           </Button>
