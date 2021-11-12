@@ -10,3 +10,8 @@ on:
 jobs:
   call-workflow-1:
     uses: Reone1/actions/.github/workflows/call.yml@dev
+    with:
+      name: Reone1
+      log: test
+    secrets:
+      token: ${{ github.event_name }}
