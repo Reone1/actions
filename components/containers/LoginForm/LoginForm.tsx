@@ -49,12 +49,7 @@ const LoginForm = () => {
             data-cy="id"
             type="text"
             error={errors.id?.message}
-            register={register('id', {
-              pattern: {
-                value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g,
-                message: 'not email',
-              },
-            })}
+            register={register('id')}
           />
           <TextInput
             label="Password"
