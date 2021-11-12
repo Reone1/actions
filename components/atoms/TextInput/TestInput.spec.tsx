@@ -38,6 +38,6 @@ describe('TextInput Test', () => {
     cy.get('fieldset').should('have.css', 'border-color', errorConstant.color);
     cy.get('p')
       .should('contain', errorConstant.errorText)
-      .and('have.css', 'color', errorConstant.color);
+      .and('have.css', 'color', errorConstant.errorText);
   });
 });
