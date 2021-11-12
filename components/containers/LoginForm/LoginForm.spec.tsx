@@ -1,8 +1,11 @@
 // @ts-check
 
-describe('example to-do app', () => {
+import { mount, unmount } from '@cypress/react';
+import LoginForm from './LoginForm';
+
+describe('example app', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000');
+    mount(<LoginForm />);
   });
 
   it('Login success Test', () => {
@@ -16,6 +19,9 @@ describe('example to-do app', () => {
     cy.getBySel('pw').type('1234');
     cy.getBySel('id').type('jaewo');
     cy.getBySel('submit').click();
-    cy.getBySel('form-title').contains('Fail1');
+    cy.getBySel('form-title').contains('Fail');
+  });
+  afterEach(() => {
+    unmount();
   });
 });
