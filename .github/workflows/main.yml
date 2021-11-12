@@ -30,6 +30,6 @@ jobs:
           command: npm run cypress run-ct
           tag: ${{ github.event_name }}
         env:
-          CYPRESS_RECORD_KEY: ${{ CYPRESS_RECORD_KEY }}
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           COMMIT_INFO_MESSAGE: ${{ github.event.pull_request.title }}
           
