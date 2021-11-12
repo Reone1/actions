@@ -1,6 +1,7 @@
 {
   "video": false,
   "record": false,
+  "projectId": "jubw3q",
   "parallel": true,
   "baseUrl": "http://localhost:3000",
   "testFiles": ["**/**.spec.js", "**/**.spec.jsx"],
