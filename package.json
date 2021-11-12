@@ -9,7 +9,7 @@
     "lint": "next lint",
     "test:cypress": "cypress open",
     "test:ct": "cypress open-ct",
-    "test:run-ct": "cypress run-ct",
+    "test:run-ct": "cypress run-ct -b chrome --record -k",
     "test:cypress:run": "cypress run",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
