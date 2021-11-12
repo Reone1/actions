@@ -27,7 +27,7 @@ jobs:
         uses: cypress-io/github-action@v2.9.7
         with:
           record: true
-          command: npm run test:ct
+          command: npm run test:run-ct
           tag: ${{ secrets.github.event_name }}
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
