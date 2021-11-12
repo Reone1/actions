@@ -51,7 +51,7 @@ const LoginForm = () => {
             error={errors.id?.message}
             register={register('id')}
           />
-          new txt
+          new txtw
           <TextInput
             label="Password"
             data-cy="pw"
